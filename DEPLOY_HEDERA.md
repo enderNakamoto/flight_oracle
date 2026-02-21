@@ -31,7 +31,17 @@ source .env   # if using .env
 
 Copy the printed **Deployed to:** address (e.g. `0x...`). This is your `AGGREGATOR_ADDRESS`.
 
-## 3. Wire Controller and Oracle (one-time)
+## 3. Verify on HashScan (optional; can do before wiring)
+
+So the contract shows as verified on [HashScan Testnet](https://hashscan.io/testnet):
+
+```bash
+./scripts/verify-hedera-testnet.sh <AGGREGATOR_ADDRESS>
+```
+
+Example: `./scripts/verify-hedera-testnet.sh 0x6942037f92Ae710c827ee1c4166c2e6Fc22E8723`
+
+## 4. Wire Controller and Oracle (one-time)
 
 Using the same deployer key (owner):
 
@@ -44,20 +54,6 @@ cast send $AGGREGATOR_ADDRESS "setOracle(address)" <ORACLE_EOA_ADDRESS> \
 ```
 
 Replace `$AGGREGATOR_ADDRESS`, `<CONTROLLER_...>`, and `<ORACLE_EOA_ADDRESS>` with your values.
-
-## 4. Verify on HashScan
-
-So the contract shows as verified on [HashScan Testnet](https://hashscan.io/testnet):
-
-```bash
-./scripts/verify-hedera-testnet.sh <AGGREGATOR_ADDRESS>
-```
-
-Example:
-
-```bash
-./scripts/verify-hedera-testnet.sh 0x047f8c7569b9beecab790902ba29daad143041d7
-```
 
 **What to do to verify it worked:**
 

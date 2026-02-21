@@ -51,7 +51,8 @@ Oracle talks to a real contract on Anvil; FlightAware is mocked so no API key is
    source .env && ./scripts/deploy-hedera-testnet.sh
    ```
 
-3. **Wire & verify:** Use the printed address to call `setController` / `setOracle`, then `./scripts/verify-hedera-testnet.sh <address>`. See [DEPLOY_HEDERA.md](DEPLOY_HEDERA.md) for details.
+3. **Verify** (optional, can do before wiring): `./scripts/verify-hedera-testnet.sh <address>`
+4. **Wire:** Call `setController` and `setOracle` with your Controller/Oracle addresses. See [DEPLOY_HEDERA.md](DEPLOY_HEDERA.md).
 
 **Deployed aggregator (Hedera Testnet):** `0x6942037f92Ae710c827ee1c4166c2e6Fc22E8723`  
 Explorer: https://hashscan.io/testnet/contract/0x6942037f92Ae710c827ee1c4166c2e6Fc22E8723
