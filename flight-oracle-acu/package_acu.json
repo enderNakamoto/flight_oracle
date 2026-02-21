@@ -1,0 +1,25 @@
+{
+  "name": "flight-oracle-acu",
+  "version": "1.0.0",
+  "description": "Acurast TEE oracle: reads active flights from aggregator contract, fetches FlightAware data, pushes updates on-chain via _STD_ globals",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "bundle": "webpack --config webpack_acu.config.js",
+    "build": "webpack --config webpack_acu.config.js",
+    "local": "node dist/bundle.js",
+    "typecheck": "tsc --noEmit --project tsconfig_acu.json"
+  },
+  "dependencies": {
+    "ethers": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

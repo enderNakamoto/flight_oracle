@@ -1,0 +1,30 @@
+{
+  "projects": {
+    "flight-oracle": {
+      "projectName": "flight-oracle",
+      "fileUrl": "dist/bundle.js",
+      "network": "canary",
+      "onlyAttestedDevices": true,
+      "assignmentStrategy": { "type": "Single" },
+      "execution": {
+        "type": "interval",
+        "intervalInMs": 600000,
+        "numberOfExecutions": 144,
+        "maxExecutionTimeInMs": 60000
+      },
+      "maxAllowedStartDelayInMs": 30000,
+      "usageLimit": { "maxMemory": 0, "maxNetworkRequests": 0, "maxStorage": 0 },
+      "numberOfReplicas": 1,
+      "requiredModules": [],
+      "minProcessorReputation": 0,
+      "maxCostPerExecution": 1000000000,
+      "includeEnvironmentVariables": [
+        "RPC_URL",
+        "AGGREGATOR_ADDRESS",
+        "FLIGHTAWARE_API_KEY",
+        "DELAY_THRESHOLD_MINUTES"
+      ],
+      "processorWhitelist": []
+    }
+  }
+}
