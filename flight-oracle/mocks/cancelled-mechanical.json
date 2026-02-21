@@ -1,0 +1,23 @@
+{
+  "flights": [
+    {
+      "ident": "AAL100",
+      "ident_icao": "AAL100",
+      "ident_iata": "AA100",
+      "fa_flight_id": "AAL100-cancelled-mechanical",
+      "cancelled": true,
+      "diverted": false,
+      "status": "Mechanical cancellation",
+      "departure_delay": null,
+      "arrival_delay": null,
+      "progress_percent": 0,
+      "scheduled_in": "2026-02-21T14:00:00Z",
+      "estimated_in": null,
+      "actual_in": null,
+      "scheduled_on": "2026-02-21T13:35:00Z",
+      "actual_on": null
+    }
+  ],
+  "num_pages": 1,
+  "links": null
+}

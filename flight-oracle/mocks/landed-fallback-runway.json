@@ -1,0 +1,23 @@
+{
+  "flights": [
+    {
+      "ident": "SWA100",
+      "ident_icao": "SWA100",
+      "ident_iata": "WN100",
+      "fa_flight_id": "SWA100-fallback-runway",
+      "cancelled": false,
+      "diverted": false,
+      "status": "Arrived",
+      "departure_delay": 0,
+      "arrival_delay": 0,
+      "progress_percent": 100,
+      "scheduled_in": "2026-02-21T12:00:00Z",
+      "estimated_in": "2026-02-21T12:00:00Z",
+      "actual_in": null,
+      "scheduled_on": "2026-02-21T11:35:00Z",
+      "actual_on": "2026-02-21T11:58:00Z"
+    }
+  ],
+  "num_pages": 1,
+  "links": null
+}

@@ -1,0 +1,23 @@
+{
+  "flights": [
+    {
+      "ident": "UAL1865",
+      "ident_icao": "UAL1865",
+      "ident_iata": "UA1865",
+      "fa_flight_id": "UAL1865-cancelled-weather",
+      "cancelled": true,
+      "diverted": false,
+      "status": "Cancelled - Weather",
+      "departure_delay": null,
+      "arrival_delay": null,
+      "progress_percent": 0,
+      "scheduled_in": "2026-02-21T01:22:00Z",
+      "estimated_in": null,
+      "actual_in": null,
+      "scheduled_on": "2026-02-21T00:59:00Z",
+      "actual_on": null
+    }
+  ],
+  "num_pages": 1,
+  "links": null
+}
