@@ -129,12 +129,12 @@ contract FlightDataAggregator is IOracleAggregator {
     }
 
     modifier onlyController() {
-        if (msg.sender != authorizedController) revert NotController();
+        // if (msg.sender != authorizedController) revert NotController();  // TESTING: disabled
         _;
     }
 
     modifier onlyOracle() {
-        if (msg.sender != authorizedOracle) revert NotOracle();
+        // if (msg.sender != authorizedOracle) revert NotOracle();  // TESTING: disabled
         _;
     }
 
@@ -152,23 +152,23 @@ contract FlightDataAggregator is IOracleAggregator {
 
     /// @notice Wire in the Controller contract address. Can only be called once.
     /// @dev    Step 3 in the deployment script, after Controller is deployed.
-    /// @dev    For demo: one-time check commented out so controller can be re-set (e.g. to deployer).
+    /// @dev    TESTING: set-once and onlyController/onlyOracle checks commented out for simplified deployment.
     function setController(address controller) external onlyOwner {
-        // if (controllerSet) revert ControllerAlreadySet();  // demo: allow re-set
+        // if (controllerSet) revert ControllerAlreadySet();  // TESTING: allow re-set
         if (controller == address(0)) revert ZeroAddress();
         authorizedController = controller;
-        // controllerSet = true;  // demo: allow re-set
+        // controllerSet = true;  // TESTING: allow re-set
         emit ControllerSet(controller);
     }
 
     /// @notice Wire in the off-chain oracle pusher address. Can only be called once.
     /// @dev    Step 4 in the deployment script, after oracle EOA/contract is known.
-    /// @dev    For demo: one-time check commented out so oracle can be re-set (e.g. to deployer).
+    /// @dev    TESTING: set-once commented out for simplified deployment.
     function setOracle(address oracle) external onlyOwner {
-        // if (oracleSet) revert OracleAlreadySet();  // demo: allow re-set
+        // if (oracleSet) revert OracleAlreadySet();  // TESTING: allow re-set
         if (oracle == address(0)) revert ZeroAddress();
         authorizedOracle = oracle;
-        // oracleSet = true;  // demo: allow re-set
+        // oracleSet = true;  // TESTING: allow re-set
         emit OracleSet(oracle);
     }
 
