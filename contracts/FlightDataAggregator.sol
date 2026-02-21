@@ -152,21 +152,23 @@ contract FlightDataAggregator is IOracleAggregator {
 
     /// @notice Wire in the Controller contract address. Can only be called once.
     /// @dev    Step 3 in the deployment script, after Controller is deployed.
+    /// @dev    For demo: one-time check commented out so controller can be re-set (e.g. to deployer).
     function setController(address controller) external onlyOwner {
-        if (controllerSet) revert ControllerAlreadySet();
+        // if (controllerSet) revert ControllerAlreadySet();  // demo: allow re-set
         if (controller == address(0)) revert ZeroAddress();
         authorizedController = controller;
-        controllerSet = true;
+        // controllerSet = true;  // demo: allow re-set
         emit ControllerSet(controller);
     }
 
     /// @notice Wire in the off-chain oracle pusher address. Can only be called once.
     /// @dev    Step 4 in the deployment script, after oracle EOA/contract is known.
+    /// @dev    For demo: one-time check commented out so oracle can be re-set (e.g. to deployer).
     function setOracle(address oracle) external onlyOwner {
-        if (oracleSet) revert OracleAlreadySet();
+        // if (oracleSet) revert OracleAlreadySet();  // demo: allow re-set
         if (oracle == address(0)) revert ZeroAddress();
         authorizedOracle = oracle;
-        oracleSet = true;
+        // oracleSet = true;  // demo: allow re-set
         emit OracleSet(oracle);
     }
 

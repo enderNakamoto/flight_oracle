@@ -1,5 +1,5 @@
 /**
- * One-time: register Phase 4 flights (UAL1200–UAL1209) on the aggregator.
+ * One-time: register Phase 4 flights (UAL1201–UAL1210) on the aggregator.
  * Controller must be set on the contract (e.g. deployer). Run from flight-oracle/ with
  * .env containing RPC_URL, AGGREGATOR_ADDRESS, and CONTROLLER_PRIVATE_KEY or HEDERA_PRIVATE_KEY.
  *
@@ -14,7 +14,6 @@ const CONTROLLER_PRIVATE_KEY =
   process.env.CONTROLLER_PRIVATE_KEY ?? process.env.HEDERA_PRIVATE_KEY;
 
 const FLIGHT_IDS = [
-  "UAL1200",
   "UAL1201",
   "UAL1202",
   "UAL1203",
@@ -24,6 +23,7 @@ const FLIGHT_IDS = [
   "UAL1207",
   "UAL1208",
   "UAL1209",
+  "UAL1210",
 ];
 
 if (!AGGREGATOR_ADDRESS) {
